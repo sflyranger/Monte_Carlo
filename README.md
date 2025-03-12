@@ -10,14 +10,14 @@ In this Project I am going to use some assumptive variables to run a simulation 
 - The mean loss given default (LGD) was 40% with a standard deviation of 5%.
 
 ##  Summary of Monte Carlo Simulations - Normal w/ clipping - `normal_distributions.py` file
-Mean Loss: $2,002,098.13
-Median Loss: $1,978,980.74
-95th percentile (VaR): $2,827,982.29
-99th percentile (VaR): $3,196,128.56
-5th Percentile (VaR): $1,261,985.08
-1st Percentile (VaR): $999,827.02
-Max Loss: $4,014,130.34
-Min Loss: $367,779.17
+- Mean Loss: $2,002,098.13
+- Median Loss: $1,978,980.74
+- 95th percentile (VaR): $2,827,982.29
+- 99th percentile (VaR): $3,196,128.56
+- 5th Percentile (VaR): $1,261,985.08
+- 1st Percentile (VaR): $999,827.02
+- Max Loss: $4,014,130.34
+- Min Loss: $367,779.17
 
 ![Distribution of Total Losses](image.png)
 
@@ -30,14 +30,14 @@ Min Loss: $367,779.17
 
 
 ## Summary of Monte Carlo Simulations - Beta Distribution from the `beta_distribution.py` file
-Mean Loss: $1,999,668.69
-Median Loss: $1,958,115.67
-95th percentile (VaR): $2,832,480.38
-99th percentile (VaR): $3,264,101.23
-5th Percentile (VaR): $1,295,365.22
-1st Percentile (VaR): $1,049,825.94
-Max Loss: $4,352,771.60
-Min Loss: $708,099.53
+- Mean Loss: $1,999,668.69
+- Median Loss: $1,958,115.67
+- 95th percentile (VaR): $2,832,480.38
+- 99th percentile (VaR): $3,264,101.23
+- 5th Percentile (VaR): $1,295,365.22
+- 1st Percentile (VaR): $1,049,825.94
+- Max Loss: $4,352,771.60
+- Min Loss: $708,099.53
 
 ![Distribution of Total Losses](image.png)
 
