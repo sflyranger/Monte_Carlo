@@ -67,4 +67,15 @@ for key, value in summary_stats.items():
 # Plot Results
 plt.figure(figsize = (10, 8))
 plt.hist(total_losses, bins = 50, color="skyblue", edgecolor="black")
-plt.axvline(n
+plt.axvline(np.percentile(total_losses, 1), color="g", linestyle="dashed", linewidth=2, label="1st Percentile")
+plt.axvline(np.percentile(total_losses, 5), color="b", linestyle="dashed", linewidth=2, label="5th Percentile")
+plt.axvline(np.percentile(total_losses, 95), color="orange", linestyle="dashed", linewidth=2, label="95th Percentile")
+plt.axvline(np.percentile(total_losses, 99), color='red', linestyle="dashed", linewidth=2, label="99th Percentile")
+plt.axvline(np.mean(total_losses), color="black", linestyle="dashed", linewidth=2, label="Mean Loss")
+plt.title("Distribution of Simulated Total Losses")
+plt.xlabel("Total Loss ($)")
+plt.ylabel("Frequency")
+plt.legend()
+plt.grid(True)
+plt.show()
+

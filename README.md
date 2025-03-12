@@ -22,9 +22,32 @@ Min Loss: $367,779.17
 ![Distribution of Total Losses](image.png)
 
 ### Analysis
-Based on the output from the simulation we can see some specific metrics to define some range cutoffs that can be used for decision making on loan portfolios. In a business scenario, this gives valuable information about what could happen in the most extreme of circumstances given the current distribution of LGD and Default Rate. It is important to note however, that this is based on a normal distribution of the values and is used as a baseline case. It does not adequately reflect what should be done in a real world scenario because some values that are greater than 1 or less than 0 could be clipped in and make the simulation unstable and perhaps unusable.
+- Based on the output from the simulation we can see some specific metrics to define some range cutoffs that can be used for decision making on loan portfolios. 
+- In a business scenario, this gives valuable information about what could happen in the most extreme of circumstances given the current distribution of LGD and Default Rate. 
+- It is important to note however, that this is based on a normal distribution of the values and is used as a baseline case. It does not adequately reflect what should be done in a real world scenario because some values that are greater than 1 or less than 0 could be clipped in and make the simulation unstable and perhaps unusable.
 
-A beta distribution should be simulated to more accurately reflect real world conditions.
+- A beta distribution should be simulated to more accurately reflect real world conditions.
+
+
+## Summary of Monte Carlo Simulations - Beta Distribution from the `beta_distribution.py` file
+Mean Loss: $1,999,668.69
+Median Loss: $1,958,115.67
+95th percentile (VaR): $2,832,480.38
+99th percentile (VaR): $3,264,101.23
+5th Percentile (VaR): $1,295,365.22
+1st Percentile (VaR): $1,049,825.94
+Max Loss: $4,352,771.60
+Min Loss: $708,099.53
+
+![Distribution of Total Losses](image.png)
+
+
+### Analysis
+- This simulation shows slightly different results than the normal distribution. For the majority of the produced statistics there doesn't seem to be much of a difference in the ranges. However, the one to make an important note of is the difference in the minimum loss stat for both outputs.
+- The minimum loss for the beta distribution is approximately $340 thousand dollars higher than that of the normal distribution. This refelcts the validity of the beta distribution over the normal.
+- This skew is most likely because of any clipped values that were on the lower end of the distribution being binned into the smaller percentiles instead of staying towards a real world distribution. 
+
+- Based on this analysis, when given a range of tolerance values by management we could trigger various alerts when the portfolio is trending towards default rates that put the portfolio at risk. 
 
 
 
